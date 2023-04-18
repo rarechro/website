@@ -1,5 +1,5 @@
 
-
+// checking class of main page content... not working
 function classcheck() {
 
     mainpagecontent = document.getElementsByTagName("section");
@@ -13,7 +13,7 @@ function classcheck() {
 
 
 
-
+//testing
 function createAboutTable() {
     var text = document.getElementById("aboutText");
     console.log(text);
@@ -31,17 +31,20 @@ function createAboutTable() {
 
 }
 
+
+
+// builds and appends a social media table to the body of the page
 function createSocialTable() {
     // create table element
     var socialTable = document.createElement("table");
-    socialTable.setAttribute("style", "width:30%; height:30%; border: 1px solid black; border-collapse: collapse; text-align: center; margin: auto;");
+    socialTable.setAttribute("style", "width:30%; height:30%; border: 1px solid black; border-collapse: collapse; text-align: center; margin: auto; background-color: #f1f1c1;");
     
     // create table row element
     var socialRow = document.createElement("tr");
 
     // create table data elements
     var facebookCell = document.createElement("td");
-    var twitterCell = document.createElement("td");
+    var linkedinCell = document.createElement("td");
     var instagramCell = document.createElement("td");
 
     // create social media icons
@@ -49,35 +52,41 @@ function createSocialTable() {
     facebookIcon.setAttribute("href", "https://www.facebook.com/");
     facebookIcon.setAttribute("target", "_blank");
     var facebookIconImage = document.createElement("img");
-    facebookIconImage.setAttribute("src", "images/facebook.png");
+    facebookIconImage.setAttribute("src", "images/facebook-removebg-preview.png");
     facebookIconImage.setAttribute("alt", "Facebook Icon");
+    facebookIconImage.style.width = "75px";
+    facebookIconImage.style.height = "75px";
 
     facebookIcon.appendChild(facebookIconImage);
 
-    var twitterIcon = document.createElement("a");
-    twitterIcon.setAttribute("href", "https://www.linkedin.com/");
-    twitterIcon.setAttribute("target", "_blank");
-    var twitterIconImage = document.createElement("img");
-    twitterIconImage.setAttribute("src", "images/linkedin.png");
-    twitterIconImage.setAttribute("alt", "Twitter Icon");
-    twitterIcon.appendChild(twitterIconImage);
+    var linkedinIcon = document.createElement("a");
+    linkedinIcon.setAttribute("href", "https://www.linkedin.com/");
+    linkedinIcon.setAttribute("target", "_blank");
+    var linkedinIconImage = document.createElement("img");
+    linkedinIconImage.setAttribute("src", "images/linkedin-removebg-preview.png");
+    linkedinIconImage.setAttribute("alt", "Twitter Icon");
+    linkedinIconImage.style.width = "75px";
+    linkedinIconImage.style.height = "75px";
+    linkedinIcon.appendChild(linkedinIconImage);
 
     var instagramIcon = document.createElement("a");
     instagramIcon.setAttribute("href", "https://www.instagram.com/");
     instagramIcon.setAttribute("target", "_blank");
     var instagramIconImage = document.createElement("img");
-    instagramIconImage.setAttribute("src", "images/instagram.png");
+    instagramIconImage.setAttribute("src", "images/instagram-removebg-preview.png");
     instagramIconImage.setAttribute("alt", "Instagram Icon");
+    instagramIconImage.style.width = "75px";
+    instagramIconImage.style.height = "75px";
     instagramIcon.appendChild(instagramIconImage);
 
     // append social media icons to table data elements
     facebookCell.appendChild(facebookIcon);
-    twitterCell.appendChild(twitterIcon);
+    linkedinCell.appendChild(linkedinIcon);
     instagramCell.appendChild(instagramIcon);
 
     // append table data elements to table row
     socialRow.appendChild(facebookCell);
-    socialRow.appendChild(twitterCell);
+    socialRow.appendChild(linkedinCell);
     socialRow.appendChild(instagramCell);
 
     // append table row to table
